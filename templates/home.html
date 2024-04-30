@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="login">
+	<h1>Electric vehicles status prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+<form action="/predict" method="POST">
+        <input type="text" name="Time [s]" placeholder="Time [s]" required="required" /><br>
+    	<input type="text" name="Battery Voltage [V]" placeholder="Battery Voltage [V]" required="required" /><br>
+        <input type="text" name="Motor Torque [Nm]" placeholder="Motor Torque [Nm]" required="required" /><br>
+        <input type="text" name="Battery Current [A]" placeholder="Battery Current [A]" required="required" /><br>
+        <input type="text" name="Battery Temperature" placeholder="Battery Temperature" required="required" /><br>
+      
+        <button type="submit">Submit</button>
+</form>
+
+    <!--<form action="{{ url_for('predict')}}"method="post">-->
+                
+       
+
+        
+    
+
+   <br>
+   <br>
+  
+   
+ </div>
+	</header>
+
+
+</body>
+</html>
